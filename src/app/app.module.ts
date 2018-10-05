@@ -19,9 +19,7 @@ import { BytePipePipe } from './pipes/byte-pipe.pipe';
     FooterComponent,
     SidebarComponent,
     MainComponent,
-    BytePipePipe,
-    ItemDirective,
-    ItemComponent
+    BytePipePipe
   ],
   imports: [
     BrowserModule,
