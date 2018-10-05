@@ -1,0 +1,22 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <h2 (click)="toRootFolder()">Files</h2>
+  <div class="table-responsive">
+    <div class="card">
+      <div class="card-header">
+      </div>
+      <table class="table table-hover">
+        <tr *ngFor="let item of items;" (click)="changeUrl(item)">
+          <td>
+            <i *ngIf="(item.type==='dir')" class="fa fa-folder" aria-hidden="true"></i>
+            <i *ngIf="(item.type==='file')" class="fa fa-file" aria-hidden="true"></i>
+            {{item.name}}
+          </td>
+          <td [textContent]="item.modified | date: 'dd.MM.yyyy'"></td>
+          <td [textContent]="item.size | bytePipe"></td>
+        </tr>
+      </table>
+      <div class="card-footer"></div>
+    </div>
+  </div>
+
+</main>
