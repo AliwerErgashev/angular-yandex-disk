@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class OauthInterceptorService implements HttpInterceptor {
 
   constructor() { }
-  private token = 'AQAAAAAcz_oEAAU6iZpg4Slv8U7suaALEOPb8s0';
+  private token = 'your token';
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     request = request.clone({
